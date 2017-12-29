@@ -123,7 +123,6 @@ public class MUSIC_STORE {
                 						String state=resultSet.getString("State");
                 						String country=resultSet.getString("Country");
                 						long postalCode=resultSet.getLong("PostalCode");
-                						//DateTime date=new Date();
                 						query="select max(InvoiceId) as MaxInvoiceId from Invoice";
                 						resultSet=statement.executeQuery(query);
                 						int invoiceId=resultSet.getInt("MaxInvoiceId")+1;
@@ -242,7 +241,7 @@ public class MUSIC_STORE {
             			}
             			break;
             		}
-            		
+            		//Identify Marketable Population
             		case 6:{
             			System.out.println("Please Enter the state : ");
             			String enteredState=scanner.next();
@@ -338,8 +337,6 @@ public class MUSIC_STORE {
                 				}
                 			}
             			}
-            			
-            			
             			break;
             			}
             		//Top Sellers By Revenue
